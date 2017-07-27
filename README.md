@@ -12,7 +12,7 @@ Run in background:
 $ docker run -d --name YOUR_CONTAINER_NAME calvintam236/cpuminer-multi -a YOUR_ALGO -o YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD
 ```
 
-Get cpuminer-multi options with:
+Get `cpuminer-multi` options with:
 
 ```console
 $ docker run --rm calvintam236/cpuminer-multi --help
