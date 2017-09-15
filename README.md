@@ -15,7 +15,7 @@ $ docker run -d --name YOUR_CONTAINER_NAME calvintam236/cpuminer-multi -a YOUR_A
 Get `cpuminer-multi` options with:
 
 ```console
-$ docker run --rm calvintam236/cpuminer-multi --help
+$ docker run --rm calvintam236/cpuminer-multi
 ```
 
 Fetch logs of a container:
