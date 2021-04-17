@@ -1,0 +1,30 @@
+FROM debian:buster-slim
+
+WORKDIR /tmp/
+
+ADD \
+https://github.com/tpruvot/cpuminer-multi/archive/refs/tags/v1.3.5-multi.tar.gz \
+.
+
+RUN \
+apt-get update \
+&& apt-get -y --no-install-recommends install ca-certificates autoconf automake g++ libcurl4-openssl-dev libgmp-dev libjansson-dev libssl-dev make pkg-config zlib1g-dev \
+&& tar -xvf v1.3.5-multi.zip \
+&& cd v1.3.5-multi/ \
+&& OBJECT_MODE=64 ./build.sh \
+&& mv cpuminer /usr/local/bin/cpuminer-multi \
+&& chmod +x /usr/local/bin/cpuminer-multi \
+&& cd ../ \
+&& rm -r * \
+&& apt-get -y remove ca-certificates autoconf automake g++ libssl-dev libgmp-dev make pkg-config zlib1g-dev
+
+
+FROM debian:buster-slim
+
+LABEL maintainer="calvintam236"
+LABEL description="CPUMiner-Multi in Docker. Supports CPU mining."
+
+COPY --from=0 /usr/local/bin/cpuminer-multi /usr/local/bin/
+
+ENTRYPOINT ["cpuminer-multi"]
+CMD ["--help"]

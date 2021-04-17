@@ -11,19 +11,19 @@ CPUMiner-Multi supports multiple algos, including scrypt, scrypt:N, scrypt-jane:
 - To build the image:
 
 ```console
-$ docker build . --file Dockerfile --tag calvintam236/cpuminer-multi
+$ docker build . --file YOUR_VERSION/Dockerfile.YOUR_ARCH --tag calvintam236/cpuminer-multi:YOUR_VERSION
 ```
 
 - To run the container in background:
 
 ```console
-$ docker run -d --name YOUR_CONTAINER_NAME calvintam236/cpuminer-multi -a YOUR_ALGO -o YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD
+$ docker run -d --name YOUR_CONTAINER_NAME calvintam236/cpuminer-multi:YOUR_VERSION -a YOUR_ALGO -o YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME -p YOUR_WORKER_PASSWORD
 ```
 
 - To get `cpuminer-multi` options:
 
 ```console
-$ docker run --rm calvintam236/cpuminer-multi
+$ docker run --rm calvintam236/cpuminer-multi:YOUR_VERSION
 ```
 
 - To fetch logs of a container:
