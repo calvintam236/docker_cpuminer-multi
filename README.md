@@ -4,7 +4,7 @@
 
 CPUMiner-Multi is the console miner provided by [tpruvot](https://github.com/tpruvot/cpuminer-multi).
 
-CPUMiner-Multi supports multiple algos, including scrypt, scrypt:N, scrypt-jane:N, sha256d, axiom, bastion, bitcore Permuted serie of 10 algos, blake, blake2s, bmw, cryptonight, cryptonight-light, decred, dmd-gr, fresh, groestl, jha, lbry, lyra2RE, lyra2REv2, myr-gr Myriad-Groestl, neoscrypt, nist5, pentablake, pluck, quark, qubit, skein, skein2, s3, sia, sib X11 + gost streebog, timetravel Permuted serie of 8 algos, tribus 3 of the top NIST5 algos, vanilla, veltor, xevan x17 x 2 on bigger header, x11evo, x11, x13, x14, x15, x17, yescrypt, and zr5.
+CPUMiner-Multi supports multiple algos, including scrypt, scrypt:N, scrypt-jane:N, sha256d, allium, axiom, bastion, bitcore Permuted serie of 10 algos, blake, blake2s, blake2b, bmw, cryptonight, cryptonight-light, decred, dmd-gr, fresh, geek, groestl, jha, lbry, lyra2RE, lyra2REv2, lyra2REv3, myr-gr Myriad-Groestl, neoscrypt, nist5, pentablake, pluck, quark, qubit, skein, skein2, s3, sia, sib X11 + gost streebog, timetravel Permuted serie of 8 algos, tribus 3 of the top NIST5 algos, vanilla, veltor, xevan x17 x 2 on bigger header, x11evo, x11, x12, x13, x14, x15, x16r, x16rv2, x16s, x17, x20r, yescrypt, and zr5.
 
 ### Example usages
 
