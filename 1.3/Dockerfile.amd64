@@ -9,7 +9,7 @@ https://github.com/tpruvot/cpuminer-multi/archive/refs/tags/v1.3.5-multi.tar.gz 
 RUN \
 apt-get update \
 && apt-get -y --no-install-recommends install ca-certificates autoconf automake g++ libcurl4-openssl-dev libgmp-dev libjansson-dev libssl-dev make pkg-config zlib1g-dev \
-&& tar -xvf v1.3.5-multi.zip \
+&& tar -xvf v1.3.5-multi.tar.gz \
 && cd v1.3.5-multi/ \
 && OBJECT_MODE=64 ./build.sh \
 && mv cpuminer /usr/local/bin/cpuminer-multi \
