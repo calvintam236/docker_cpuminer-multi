@@ -16,7 +16,7 @@ apt-get update \
 && chmod +x /usr/local/bin/cpuminer-multi \
 && cd ../ \
 && rm -r * \
-&& apt-get -y remove ca-certificates autoconf automake g++ libssl-dev libgmp-dev make pkg-config zlib1g-dev
+&& apt-get -y remove ca-certificates autoconf automake g++ libcurl4-openssl-dev libgmp-dev libjansson-dev libssl-dev make pkg-config zlib1g-dev
 
 
 FROM debian:buster-slim
@@ -25,6 +25,10 @@ LABEL maintainer="calvintam236"
 LABEL description="CPUMiner-Multi in Docker. Supports CPU mining."
 
 COPY --from=0 /usr/local/bin/cpuminer-multi /usr/local/bin/
+
+RUN \
+apt-get update \
+&& apt-get -y --no-install-recommends install libcurl4-openssl-dev libjansson-dev
 
 ENTRYPOINT ["cpuminer-multi"]
 CMD ["--help"]
